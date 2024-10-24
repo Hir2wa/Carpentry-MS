@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Carpentry Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/logo.jfif" alt="Carpentry Management System Logo" class="logo">
+            <div class="header-content">
+                <h1>MasterCraft Woodworks</h1>
+               
+            </div>
+        </div>
+    </header>
+  
+    <nav>
+        <ul>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="order.php">Custom Order</a></li>
+                <li><a href="user_orders.php">Pending Order</a></li>
+                <li><a href="logout.php">logout</a></li>
+    
+            </ul>
+        </ul>
+    </nav>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <div class="container">
+            <h2>Our Pricing Plans</h2>
+            <p>Choose a pricing plan that fits your needs and budget. We offer flexible options to cater to different project sizes and complexities.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic Plan</h3>
+                    <p class="price">$30</p>
+                    <ul>
+                        <li>Consultation and Planning</li>
+                        <li>Basic Material Selection</li>
+                        <li>Standard Workmanship</li>
+                        <li>Delivery within 30 days</li>
+                    </ul>
+                    <button onclick="selectPlan('Basic Plan')">Select Plan</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Standard Plan</h3>
+                    <p class="price">$60</p>
+                    <ul>
+                        <li>Consultation and Planning</li>
+                        <li>Premium Material Selection</li>
+                        <li>High-Quality Workmanship</li>
+                        <li>Delivery within 20 days</li>
+                    </ul>
+                    <button onclick="selectPlan('Standard Plan')">Select Plan</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Premium Plan</h3>
+                    <p class="price">$100</p>
+                    <ul>
+                        <li>Consultation and Planning</li>
+                        <li>Exclusive Material Selection</li>
+                        <li>Top-Tier Workmanship</li>
+                        <li>Delivery within 10 days</li>
+                    </ul>
+                    <button onclick="selectPlan('Premium Plan')">Select Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Carpentry Management System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function selectPlan(planName) {
+            const url = new URL('customer_order.html', window.location.origin);
+            url.searchParams.append('pricing_plan', planName);
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

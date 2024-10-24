@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MasterCraft Woodworks</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Contact Form Styles */
+        #contact-form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        #contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        #contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        #contact-form input, #contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #contact-form button {
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #contact-form button:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <img src="images/logo.jfif" alt="Carpentry Management System Logo" class="logo">
+            <div class="header-content">
+                <h1>MasterCraft Woodworks</h1>
+               
+            </div>
+        </div>
+    </header>
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="order.php">Custom Order</a></li>
+                <li><a href="user_orders.php">Pending Order</a></li>
+                <li><a href="logout.php">logout</a></li>
+    
+            </ul>
+
+        </ul>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form action="send_email.php" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MasterCraft Woodworks. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

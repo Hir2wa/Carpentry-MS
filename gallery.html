@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Carpentry Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Grid Section */
+        #decking-grid {
+            padding: 40px 0;
+        }
+
+        #decking-grid h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-item {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: 50%;
+            margin-bottom: 5%;
+            border-radius: 5px;
+        }
+
+        .grid-item h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .grid-item p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .grid-item a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .grid-item a:hover {
+            background-color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* View Cart Button */
+        .view-cart-btn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .view-cart-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/logo.jfif" alt="Carpentry Management System Logo" class="logo">
+            <div class="header-content">
+                <h1>MasterCraft Woodworks</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="order.php">Custom Order</a></li>
+                <li><a href="user_orders.php">Pending Order</a></li>
+                <li><a href="logout.php">logout</a></li>
+    
+            </ul>
+        </ul>
+    </nav>
+
+    <!-- Gallery Introduction Section -->
+    <section id="gallery-intro">
+        <div class="container">
+            <h2>Our Gallery</h2>
+            <p>Discover our range of beautifully crafted carpentry items. Click on any item to add it to your order.</p>
+        </div>
+    </section>
+
+    <!-- Decking Grid Section -->
+    <section id="decking-grid">
+        <div class="container">
+            <h2>Our Decking Options</h2>
+            <div class="grid">
+                <div class="grid-item" data-name="Wooden Deck" data-cost="1200">
+                    <img src="images/Wooden Deck.jpeg" alt="Wooden Deck">
+                    <h3>Wooden Deck</h3>
+                    <p>Price: $1200</p>
+                    <a href="#" onclick="addToOrder(this)">Add to Order</a>
+                </div>
+                <div class="grid-item" data-name="Composite Deck" data-cost="1500">
+                    <img src="images/Composite Deck.jpeg" alt="Composite Deck">
+                    <h3>Composite Deck</h3>
+                    <p>Price: $1500</p>
+                    <a href="#" onclick="addToOrder(this)">Add to Order</a>
+                </div>
+                <div class="grid-item" data-name="PVC Deck" data-cost="1000">
+                    <img src="images/PVC Deck.jpeg" alt="PVC Deck">
+                    <h3>PVC Deck</h3>
+                    <p>Price: $1000</p>
+                    <a href="#" onclick="addToOrder(this)">Add to Order</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cabinets Grid Section -->
+    <section id="cabinet-grid">
+        <div class="container">
+            <h2>Our Cabinet Options</h2>
+            <div class="grid">
+                <div class="grid-item" data-name="Modern Kitchen Cabinet" data-cost="800">
+                    <img src="images/Modern Kitchen Cabinet.jpeg" alt="Modern Kitchen Cabinet">
+                    <h3>Modern Kitchen Cabinet</h3>
+                    <p>Price: $800</p>
+                    <a href="#" onclick="addToOrder(this)">Add to Order</a>
+                </div>
+                <div class="grid-item" data-name="Classic Wooden Cabinet" data-cost="750">
+                    <img src="images/Classic Wooden Cabinet.jpeg" alt="Classic Wooden Cabinet">
+                    <h3>Classic Wooden Cabinet</h3>
+                    <p>Price: $750</p>
+                    <a href="#" onclick="addToOrder(this)">Add to Order</a>
+                </div>
+                <div class="grid-item" data-name="Elegant Bathroom Cabinet" data-cost="600">
+                    <img src="images/Elegant Bathroom Cabinet.jpeg" alt="Elegant Bathroom Cabinet">
+                    <h3>Elegant Bathroom Cabinet</h3>
+                    <p>Price: $600</p>
+                    <a href="#" onclick="addToOrder(this)">Add to Order</a>
+                </div>
+                <div class="grid-item" data-name="Custom Wardrobe Cabinet" data-cost="950">
+                    <img src="images/Custom Wardrobe Cabinet.jpeg" alt="Custom Wardrobe Cabinet">
+                    <h3>Custom Wardrobe Cabinet</h3>
+                    <p>Price: $950</p>
+                    <a href="#" onclick="addToOrder(this)">Add to Order</a>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 MasterCraft Woodworks. All rights reserved.</p>
+            </div>
+        </footer>
+    </footer>
+
+    <!-- JavaScript for Adding to Cart -->
+    <script>
+        function addToOrder(element) {
+            const item = element.closest('.grid-item');
+            const name = item.getAttribute('data-name');
+            const cost = item.getAttribute('data-cost');
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItem = cart.find(cartItem => cartItem.name === name);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price: parseFloat(cost), quantity: 1 });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} has been added to your cart.`);
+        }
+    </script>
+</body>
+</html>
